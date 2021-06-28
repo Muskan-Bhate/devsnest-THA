@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    background-color: #000000;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-image: linear-gradient(#f7ea60,#3cf2de,rgb(189, 241, 250));
+}
+
+.cards{
+    width: 200px;
+    height: 200px;
+    margin: 3px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ,opacity 0.3s ease-in;
+    cursor: pointer;
+}
+
+.front-face{
+    background-color: rgb(1, 7, 92);
+    
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    opacity: 0.7;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.front-face,.back-face{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.back-face{
+    transform:rotateY(180deg);
+}
+.flip{
+    transform:rotateY(180deg);
+}
+.won{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Merienda', cursive;;
+    font-size: 2rem;
+    display: none;
+}
+h1{
+    color:rgb(50, 120, 224);
+    text-shadow:2px 3px #f7ea60;
+}
+.play-again{
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    background: #4bd17e;
+    box-shadow: 4px 4px 13px #10684a8e,
+                -1px -1px 9px #53ffcb88;
+    border: 0;
+    padding:15px 0px;
+    margin-top: 10px;
+    color:rgba(208, 247, 240, 0.89);
+    width: 100%;
+    font-weight: bold;
+}
+.play-again:focus{
+    font-size: 1.7rem;
+    border-radius: 10px;
+    background: #e85d04;
+    box-shadow: inset 4px 4px 14px #5d2502,
+                inset -1px -1px 14px #ff9506;
+}
