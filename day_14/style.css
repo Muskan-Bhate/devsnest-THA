@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100vh;
+	width: 100%;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(135deg,#02acbe,#397c4d);
+}
+.container{
+	position: fixed;
+	right: 0;
+	height: 100%;
+	width:62%;
+	border-bottom-left-radius:350px 300px;
+	margin-left: 12px;
+	background-image: linear-gradient(135deg,rgba(128, 128, 128, 0.815),rgba(66, 66, 66, 0.822));
+	box-shadow: 10px 10px 30px 25px rgba(0, 0, 0, 0.212);
+}
+.main{
+	position :absolute;
+	height: 95%;
+	width:24%;
+	top: 20px;
+	left:45px;
+	border-radius: 20px;
+	background-image: linear-gradient(#8dcdd4d3,#8ad4bed8);
+	box-shadow: 10px 10px 30px 7px rgba(0, 0, 0, 0.212);
+}
+#logo{
+	font-size: 1.5em;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 20px;
+	font-family: 'Righteous', cursive;
+}
+#logo i {
+  margin-right: 7px;
+}
+#track_image{
+	position: relative;
+	top: 60px;
+	left: 30px;
+	width: 310px;
+	height: 310px;
+	border-radius: 50%;
+	box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.281);
+}
+.play_btns{
+    position: relative;
+	left: 110px;
+    top: 100px;
+}
+#title{
+	margin-top: 3px;
+	font-size: 2.2em;
+}
+#title,#artist{
+	text-align: center;
+	position: relative;
+	top: 10px;
+	font-family: 'Signika Negative', sans-serif;
+}
+#artist{
+	font-size: 1.3em;
+	padding-top: 3px;
+}
+.duration{
+	-webkit-appearance: none;
+	position: relative;
+	left: 25px;
+	top: 190px;	
+}
+.duration>input[type="range"]{
+	-webkit-appearance: none;
+	background-color: transparent;
+	width: 300px;
+	height:20px;
+	border-radius: 5px;
+}
+.duration>input[type="range"]::-webkit-slider-thumb{
+	margin-top: -8.9px;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.192);
+	border: 2px solid #072e1c;
+	cursor: pointer;
+}
+
+  input[type="range"]:active::-webkit-slider-thumb {
+	transform: scale(1.2);
+	background: #02acbe;
+  }
+  .duration>input[type="range"]::-webkit-slider-runnable-track {
+	background-color: #072e1c;
+	content: '';
+	height: 2px;
+	pointer-events: none;
+  }
+  .show_song_no{
+	  width: 50px;
+	  height: 30px;
+	  background-color: rgba(255, 255, 255, 0.164);
+	  border-radius: 6px;
+	  padding-top: 9px;
+	  padding-left: 15px;
+	  font-family: 'Signika Negative', sans-serif;
+	  font-size: 1.3em;
+	  font-weight: 300;
+	  margin: 26px;
+	  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.171);
+  }
+
+  #pre,#play,#next{
+	  font-size: 30px;
+	  padding: 4px 15px;
+      background-color: rgba(253, 253, 253, 0.062);
+	  border: none;
+	  outline: none;
+  }
+  #auto{
+	  position: absolute;
+	  right:30%;
+	  bottom: 13%;
+	  outline: none;
+	  border: none;
+	  border-radius: 15px;
+	  font-size: 30px;
+	  padding:15px;
+	  background-image: linear-gradient(#8dcdd491,#8ad4be8f);
+	  font-family: 'Signika Negative', sans-serif; 
+	  font-weight: 600;
+	  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.171);
+  }
+  #pre:hover{
+     padding: 3px 14px;
+	 font-size: 28px;
+  }
+  #play:hover{
+	padding: 3px 14px;
+	font-size: 28px;
+  }
+  #next:hover{
+	padding: 3px 14px;
+	font-size: 28px;
+  }
+  .volume{
+	transform: rotate(-90deg);
+	-webkit-appearance: none;
+	position: absolute;
+	right: 5%;
+	bottom:29%;	
+}
+.volume>input[type="range"]{
+	-webkit-appearance: none;
+	width: 180px;
+	height:20px;
+	background-color: transparent;
+	border-radius: 5px;
+}
+.volume>input[type="range"]::-webkit-slider-thumb{
+	margin-top: -8.9px;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.192);
+	border: 2px solid #072e1c;
+	cursor: pointer;
+}
+
+  input[type="range"]:active::-webkit-slider-thumb {
+	transform: scale(1.2);
+	background: #02acbe;
+  }
+  .volume>input[type="range"]::-webkit-slider-runnable-track {
+	background: #072e1c;
+	content: '';
+	height: 2px;
+	pointer-events: none;
+  }
+  #volume_show{
+	  transform: rotate(90deg);
+	  position: absolute;
+	  left: 100%;
+	  margin-left:10px;
+	  top:-8px;
+	  font-family:'Signika Negative', sans-serif;
+	  font-size: 24px;
+	  font-weight: 500;
+	  background-color:transparent;
+  }
+  .volume>i{
+	  transform: rotate(90deg);
+	  margin-right:5px;
+	  font-size: 20px;
+  }
+  .container_one{
+	  position: absolute;
+	  right:0;
+	  height: 100%;
+	  width:70%;
+	  z-index:-5;
+	  box-shadow: 10px 10px 30px 15px rgba(0, 0, 0, 0.315);
+	  border-bottom-left-radius:450px 300px;
+	  background-image: linear-gradient(#8dcdd4d3,#8ad4bed8);
+  }
+ 
