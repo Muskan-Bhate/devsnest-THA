@@ -11,6 +11,7 @@ let auto_play = document.querySelector('#auto');
 let present = document.querySelector('#present');
 let total = document.querySelector('#total');
 let artist = document.querySelector('#artist');
+let track_image1 = document.querySelector('#track_image1')
 
 let timer;
 let autoplay = 0;
@@ -60,6 +61,7 @@ function load_track(index_no) {
     title.innerHTML = All_song[index_no].name;
     track_image.src = All_song[index_no].img;
     artist.innerHTML = All_song[index_no].singer;
+    track_image1.src = All_song[index_no].img;
     track.load();
 
     timer = setInterval(range_slider, 1000);
